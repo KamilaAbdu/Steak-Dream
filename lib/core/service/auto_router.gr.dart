@@ -105,3 +105,19 @@ class ProfileRoute extends PageRouteInfo<void> {
     },
   );
 }
+
+/// generated route for
+/// [StoriesScreen]
+class StoriesRoute extends PageRouteInfo<void> {
+  const StoriesRoute({List<PageRouteInfo>? children})
+    : super(StoriesRoute.name, initialChildren: children);
+
+  static const String name = 'StoriesRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const StoriesScreen();
+    },
+  );
+}

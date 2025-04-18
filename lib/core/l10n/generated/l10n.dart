@@ -104,6 +104,56 @@ class L10ns {
       args: [],
     );
   }
+
+  /// `Бонусная карта`
+  String get loyaltyProgramTitle {
+    return Intl.message(
+      'Бонусная карта',
+      name: 'loyaltyProgramTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Покажите QR-код кассиру чтобы поменятьь их.`
+  String get loyaltyProgramSubTitle {
+    return Intl.message(
+      'Покажите QR-код кассиру чтобы поменятьь их.',
+      name: 'loyaltyProgramSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dreamчиков`
+  String get loyaltyProgramCount {
+    return Intl.message(
+      'Dreamчиков',
+      name: 'loyaltyProgramCount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Попробуйте новый вкус`
+  String get promotionItemTitle {
+    return Intl.message(
+      'Попробуйте новый вкус',
+      name: 'promotionItemTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Приходите за новым вкусом`
+  String get promotionItemSubTitle {
+    return Intl.message(
+      'Приходите за новым вкусом',
+      name: 'promotionItemSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<L10ns> {

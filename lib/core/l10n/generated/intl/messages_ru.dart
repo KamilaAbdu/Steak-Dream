@@ -27,7 +27,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "favoriteNavigationBarItem": MessageLookupByLibrary.simpleMessage(
       "Избранные",
     ),
+    "loyaltyProgramCount": MessageLookupByLibrary.simpleMessage("Dreamчиков"),
+    "loyaltyProgramSubTitle": MessageLookupByLibrary.simpleMessage(
+      "Покажите QR-код кассиру чтобы поменятьь их.",
+    ),
+    "loyaltyProgramTitle": MessageLookupByLibrary.simpleMessage(
+      "Бонусная карта",
+    ),
     "mainNavigationBarItem": MessageLookupByLibrary.simpleMessage("Главная"),
     "profileNavigationBarItem": MessageLookupByLibrary.simpleMessage("Профиль"),
+    "promotionItemSubTitle": MessageLookupByLibrary.simpleMessage(
+      "Приходите за новым вкусом",
+    ),
+    "promotionItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Попробуйте новый вкус",
+    ),
   };
 }

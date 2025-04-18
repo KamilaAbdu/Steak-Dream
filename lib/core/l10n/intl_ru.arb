@@ -4,5 +4,13 @@
     "favoriteNavigationBarItem": "Избранные",
     "catalogNavigationBarItem": "Каталог",
     "cartNavigationBarItem": "Корзина",
-    "profileNavigationBarItem": "Профиль"
+    "profileNavigationBarItem": "Профиль",
+    "loyaltyProgramTitle": "Бонусная карта",
+    "loyaltyProgramSubTitle": "Покажите QR-код кассиру чтобы поменятьь их.",
+    "loyaltyProgramCount": "Dreamчиков",
+    "promotionItemTitle": "Попробуйте новый вкус",
+    "promotionItemSubTitle": "Приходите за новым вкусом"
+
+
+    
 }

@@ -35,6 +35,21 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static const TextStyle s20w600 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle s18w700 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const TextStyle s18w600 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+
   static const TextStyle mainHeader = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w700,

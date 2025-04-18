@@ -45,7 +45,7 @@ class MainTabWrapperScreen extends StatelessWidget {
                       AppAssets.mainNavigationBarItem,
                       AppAssets.favoriteNavigationBarItem,
                       AppAssets.catalogNavigationBarItem,
-                      AppAssets.cartNavigationBarItem,
+                      AppAssets.cartItem,
                       AppAssets.profileNavigationBarItem,
                     ][index];
 

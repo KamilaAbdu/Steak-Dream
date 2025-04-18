@@ -1,46 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:steak_dream/core/l10n/generated/l10n.dart';
 import 'package:steak_dream/core/provider/localization_provider.dart';
 import 'package:steak_dream/core/provider/theme_provider.dart';
 import 'package:steak_dream/core/service/auto_router.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:steak_dream/features/stories/presentation/bloc/stories_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(SteakDreamApp());
+  runApp(const SteakDreamApp());
 }
 
 class SteakDreamApp extends StatelessWidget {
-  SteakDreamApp({super.key});
-
-  final _appRouter = AppRouter();
+  const SteakDreamApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
+
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => LocalizationProvider()),
-        ChangeNotifierProvider(create: (context) => ThemeProvider()),
-
-
+        ChangeNotifierProvider(create: (_) => LocalizationProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        BlocProvider(create: (_) => StoriesBloc()),
       ],
       child: Consumer2<LocalizationProvider, ThemeProvider>(
         builder: (context, localizationProvider, themeProvider, child) {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
             locale: localizationProvider.currentLocale,
-            theme: context.watch<ThemeProvider>().currentTheme,
+            theme: themeProvider.currentTheme,
             localizationsDelegates: const [
               L10ns.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            supportedLocales: const [Locale('ky'), Locale('en'), Locale('ru')],
-            routerConfig: _appRouter.config(),
+            supportedLocales: const [
+              Locale('ky'),
+              Locale('en'),
+              Locale('ru'),
+            ],
+            routerConfig: appRouter.config(),
           );
         },
       ),
     );
-  }}
+  }
+}
