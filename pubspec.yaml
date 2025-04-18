@@ -1,0 +1,40 @@
+name: steak_dream
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.8.0+1
+  flutter_bloc: ^9.1.0
+  provider: ^6.1.4
+  flutter_svg: ^2.0.17
+  auto_route: ^10.0.1
+  auto_route_generator: ^10.0.1
+  intl: ^0.19.0
+  flutter_localization: ^0.3.2
+  intl_utils: ^2.8.10
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - lib/core/assets/images/
+    - lib/core/assets/icons/
+flutter_intl:
+  enabled: true 
+  main_locale: "ru"
+  arb_dir: lib/core/l10n 
+  output_dir: lib/core/l10n/generated 
+  class_name: L10ns 

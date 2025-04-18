@@ -1,0 +1,8 @@
+{ 
+    "@@locale": "ru",
+    "mainNavigationBarItem": "Главная",
+    "favoriteNavigationBarItem": "Избранные",
+    "catalogNavigationBarItem": "Каталог",
+    "cartNavigationBarItem": "Корзина",
+    "profileNavigationBarItem": "Профиль"
+}
