@@ -6,6 +6,9 @@ class AppAssets {
   static const String profileNavigationBarItem = 'lib/core/assets/icons//profile_navigation_ic.svg';
   static const String themeSwicherIcon = 'lib/core/assets/icons/theme_swicher.svg';
   static const String bonusItem = 'lib/core/assets/icons/bonus_count.svg';
+  static const String circleArrowBack = 'lib/core/assets/icons/circle_arrow_back.svg';
+
+
   static const String qr = 'lib/core/assets/images/QR.png';
   static const String promotionItem = 'lib/core/assets/images/promotion_item.png';
   static const String bonusCoffeeBG = 'lib/core/assets/images/bonus_coffee_bg.png';

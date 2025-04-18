@@ -54,7 +54,10 @@ class LoyaltyProgramBanner extends StatelessWidget {
             ),
 
             GestureDetector(
-             //onTap: () => QrDialog(),
+              onTap: () {
+                showDialog(context: context, builder: (_) => const QrDialog());
+              },
+
               child: Image.asset(AppAssets.qr, width: 100, height: 100),
             ),
           ],
