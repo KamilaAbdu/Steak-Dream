@@ -5,12 +5,7 @@ class AppAssets {
   static const String cartItem = 'lib/core/assets/icons//cart_navigation_ic.svg';
   static const String profileNavigationBarItem = 'lib/core/assets/icons//profile_navigation_ic.svg';
   static const String themeSwicherIcon = 'lib/core/assets/icons/theme_swicher.svg';
-  static const String bonusIcon = 'lib/core/assets/icons/bonus_ic.svg';
   static const String bonusItem = 'lib/core/assets/icons/bonus_count.svg';
-
-
-
-
   static const String qr = 'lib/core/assets/images/QR.png';
   static const String promotionItem = 'lib/core/assets/images/promotion_item.png';
   static const String bonusCoffeeBG = 'lib/core/assets/images/bonus_coffee_bg.png';
@@ -18,6 +13,9 @@ class AppAssets {
   static const String popularBannerBG = 'lib/core/assets/images/popular_banner_bg.png';
   static const String salad = 'lib/core/assets/images/salad.png';
   static const String recommended = 'lib/core/assets/images/recommended.png';
+  static const String defaultStories = 'lib/core/assets/images/default_stories.png';
+  static const String meat = 'lib/core/assets/images/meat.png';
+
 
 
 

@@ -41,7 +41,7 @@ class _StoriesHorizontalScrollingListState
   void _onStoryTap(StoryModel story) async {
     await _markAsViewed(story.id);
     if (!mounted) return;
-    showDialog(context: context, builder: (_) => StoryDialog(story: story));
+    showDialog(context: context, builder: (_) => StoriesDialog(story: story));
   }
 
   @override

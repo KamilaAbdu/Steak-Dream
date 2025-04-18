@@ -1,48 +1,98 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:steak_dream/core/assets/app_assets.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
-import 'package:steak_dream/features/all_promotions/widgets/stories_list/stories_default_icon.dart';
 import 'package:steak_dream/features/stories/data/model/stories_model.dart';
 
-class StoryDialog extends StatelessWidget {
+class StoriesDialog extends StatefulWidget {
   final StoryModel story;
 
-  const StoryDialog({super.key, required this.story});
+  const StoriesDialog({super.key, required this.story});
+
+  @override
+  State<StoriesDialog> createState() => _StoriesDialogState();
+}
+
+class _StoriesDialogState extends State<StoriesDialog>
+    with TickerProviderStateMixin {
+  late AnimationController _progressController;
+
+  @override
+  void initState() {
+    super.initState();
+    _progressController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..forward();
+
+    Future.delayed(const Duration(seconds: 5), () {
+      if (mounted) Navigator.of(context).pop();
+    });
+  }
+
+  @override
+  void dispose() {
+    _progressController.dispose();
+    super.dispose();
+  }
+
+  void _close() {
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      backgroundColor: AppColors.backgraoundBlack,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+    return Dialog.fullscreen(
+      backgroundColor: AppColors.orangeBackground,
+      child: GestureDetector(
+        onTap: _close,
+        child: Stack(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: story.imageUrl.isNotEmpty
-                  ? Image.network(
-                      story.imageUrl,
-                      width: 240,
-                      height: 240,
-                      fit: BoxFit.cover,
-                    )
-                  : const DefaultIcon(size: 240),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 50),
+                Center(
+                  child: widget.story.imageUrl.isNotEmpty
+                      ? Image.network(
+                        widget.story.imageUrl,
+                        height: 300,
+                        width: 358,
+                        fit: BoxFit.contain,
+                      )
+                      : Image.asset(AppAssets.meat, height: 300, width: 358),
+                ),
+                const SizedBox(
+                  height: 40,
+                ), 
+                Text(
+                  widget.story.title.isNotEmpty
+                      ? widget.story.title
+                      : "Попробуйте новый вкус",
+                  style: AppTextStyles.mainHeader.copyWith(
+                    color: Colors.white,
+                    fontStyle: FontStyle.italic,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
-            const SizedBox(height: 16),
-            Text(
-              story.title.isNotEmpty ? story.title : "Кешбеки",
-              style: AppTextStyles.s20w500.copyWith(color: Colors.white),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 12),
-            ElevatedButton(
-              onPressed: () => Navigator.of(context).pop(),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.uiLightGrey,
+
+            Positioned(
+              top: 40,
+              left: 12,
+              right: 12,
+              child: AnimatedBuilder(
+                animation: _progressController,
+                builder: (context, child) {
+                  return LinearProgressIndicator(
+                    value: _progressController.value,
+                    backgroundColor: Colors.grey.withOpacity(0.3),
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                  );
+                },
               ),
-              child: const Text("Закрыть"),
             ),
           ],
         ),
