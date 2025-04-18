@@ -32,6 +32,13 @@ flutter:
   assets:
     - lib/core/assets/images/
     - lib/core/assets/icons/
+
+  fonts:
+    - family: gillsans
+      fonts:
+        - asset: lib/core/assets/fonts/gill_sans.ttf
+          weight: 400
+
 flutter_intl:
   enabled: true 
   main_locale: "ru"

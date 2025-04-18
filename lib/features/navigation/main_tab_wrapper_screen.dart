@@ -24,86 +24,83 @@ class MainTabWrapperScreen extends StatelessWidget {
         final tabsRouter = AutoTabsRouter.of(context);
 
         return Scaffold(
+          backgroundColor: Colors.transparent,
           body: child,
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: tabsRouter.activeIndex,
-            onTap: tabsRouter.setActiveIndex,
-            backgroundColor: AppColors.uiDarkGrey,
-            selectedItemColor: AppColors.white,
-            unselectedItemColor: AppColors.uiLightGrey,
-            type: BottomNavigationBarType.fixed,
-            items: [
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppAssets.mainNavigationBarItem,
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                    tabsRouter.activeIndex == 0
-                        ? AppColors.white
-                        : AppColors.uiLightGrey,
-                    BlendMode.srcIn,
+          bottomNavigationBar: Container(
+            margin: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            decoration: BoxDecoration(
+              color: AppColors.uiDarkGrey,
+              borderRadius: BorderRadius.circular(40),
+            ),
+            width: 358,
+            height: 60,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(5, (index) {
+                final isSelected = tabsRouter.activeIndex == index;
+
+                final icon =
+                    [
+                      AppAssets.mainNavigationBarItem,
+                      AppAssets.favoriteNavigationBarItem,
+                      AppAssets.catalogNavigationBarItem,
+                      AppAssets.cartNavigationBarItem,
+                      AppAssets.profileNavigationBarItem,
+                    ][index];
+
+                final label =
+                    [
+                      context.lang.mainNavigationBarItem,
+                      context.lang.favoriteNavigationBarItem,
+                      context.lang.catalogNavigationBarItem,
+                      context.lang.cartNavigationBarItem,
+                      context.lang.profileNavigationBarItem,
+                    ][index];
+
+                return GestureDetector(
+                  onTap: () => tabsRouter.setActiveIndex(index),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 10,
+                    ),
+                    decoration:
+                        isSelected
+                            ? BoxDecoration(
+                              color: AppColors.orangeBackgroundTransparent20,
+                              borderRadius: BorderRadius.circular(40),
+                            )
+                            : null,
+                    child: Row(
+                      children: [
+                        SvgPicture.asset(
+                          icon,
+                          height: 30,
+                          width: 30,
+                          colorFilter: ColorFilter.mode(
+                            isSelected
+                                ? AppColors.white
+                                : AppColors.uiLightGrey,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                        if (isSelected) ...[
+                          const SizedBox(width: 8),
+                          Text(
+                            label,
+                            style: const TextStyle(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
                   ),
-                ),
-                label: context.lang.mainNavigationBarItem,
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppAssets.favoriteNavigationBarItem,
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                    tabsRouter.activeIndex == 1
-                        ? AppColors.white
-                        : AppColors.uiLightGrey,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: context.lang.favoriteNavigationBarItem,
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppAssets.catalogNavigationBarItem,
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                    tabsRouter.activeIndex == 2
-                        ? AppColors.white
-                        : AppColors.uiLightGrey,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: context.lang.catalogNavigationBarItem,
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppAssets.cartNavigationBarItem,
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                    tabsRouter.activeIndex == 3
-                        ? AppColors.white
-                        : AppColors.uiLightGrey,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: context.lang.cartNavigationBarItem,
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  AppAssets.profileNavigationBarItem,
-                  height: 24,
-                  width: 24,
-                  colorFilter: ColorFilter.mode(
-                    tabsRouter.activeIndex == 3
-                        ? AppColors.white
-                        : AppColors.uiLightGrey,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: context.lang.profileNavigationBarItem,
-              ),
-            ],
+                );
+              }),
+            ),
           ),
         );
       },
