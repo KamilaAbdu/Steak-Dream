@@ -7,6 +7,13 @@ class AppAssets {
   static const String themeSwicherIcon = 'lib/core/assets/icons/theme_swicher.svg';
   static const String bonusItem = 'lib/core/assets/icons/bonus_count.svg';
   static const String circleArrowBack = 'lib/core/assets/icons/circle_arrow_back.svg';
+  static const String coffeeCheckIcon = 'lib/core/assets/icons/coffee_check_icon.svg';
+  static const String giftIcon = 'lib/core/assets/icons/gift_icon.svg';
+  static const String giftIconActive = 'lib/core/assets/icons/gift_icon_active.svg';
+
+
+  static const String coffeeCheckIconActive = 'lib/core/assets/icons/coffee_check_icon_active.svg';
+
 
 
   static const String qr = 'lib/core/assets/images/QR.png';

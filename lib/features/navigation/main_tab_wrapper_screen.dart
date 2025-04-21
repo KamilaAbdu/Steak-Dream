@@ -14,7 +14,7 @@ class MainTabWrapperScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsRouter.tabBar(
       routes: const [
-        AllPromotionsRoute(),
+        MainPromotionsRoute(),
         FavoriteRoute(),
         CatalogRoute(),
         CartRoute(),

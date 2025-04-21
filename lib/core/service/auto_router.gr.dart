@@ -11,17 +11,17 @@
 part of 'auto_router.dart';
 
 /// generated route for
-/// [AllPromotionsScreen]
-class AllPromotionsRoute extends PageRouteInfo<void> {
-  const AllPromotionsRoute({List<PageRouteInfo>? children})
-    : super(AllPromotionsRoute.name, initialChildren: children);
+/// [MainPromotionsScreen]
+class MainPromotionsRoute extends PageRouteInfo<void> {
+  const MainPromotionsRoute({List<PageRouteInfo>? children})
+    : super(MainPromotionsRoute.name, initialChildren: children);
 
   static const String name = 'AllPromotionsRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const AllPromotionsScreen();
+      return const MainPromotionsScreen();
     },
   );
 }
@@ -75,6 +75,22 @@ class FavoriteRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [LoyaltyScreen]
+class LoyaltyRoute extends PageRouteInfo<void> {
+  const LoyaltyRoute({List<PageRouteInfo>? children})
+    : super(LoyaltyRoute.name, initialChildren: children);
+
+  static const String name = 'LoyaltyRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const LoyaltyScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [MainTabWrapperScreen]
 class MainTabWrapperRoute extends PageRouteInfo<void> {
   const MainTabWrapperRoute({List<PageRouteInfo>? children})
@@ -102,6 +118,22 @@ class ProfileRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const ProfileScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [PromotionsListScreen]
+class PromotionsListRoute extends PageRouteInfo<void> {
+  const PromotionsListRoute({List<PageRouteInfo>? children})
+    : super(PromotionsListRoute.name, initialChildren: children);
+
+  static const String name = 'PromotionsListRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PromotionsListScreen();
     },
   );
 }

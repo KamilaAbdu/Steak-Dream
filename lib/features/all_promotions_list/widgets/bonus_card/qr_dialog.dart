@@ -38,23 +38,27 @@ class QrDialog extends StatelessWidget {
 
               SizedBox(height: isSmallScreen ? 24 : 48),
 
-              Container(
-                width: size.width * 0.75,
-                height: size.width * 0.75,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(24),
+              Flexible(
+                child: Container(
+                  width: size.width * 0.75,
+                  height: size.width * 0.75,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: Image.asset(AppAssets.qr, fit: BoxFit.contain),
                 ),
-                child: Image.asset(AppAssets.qr, fit: BoxFit.contain),
               ),
               SizedBox(height: isSmallScreen ? 24 : 32),
-              Text(
-                "Покажите QR-код кассиру\nчтобы поменять их",
-                style: AppTextStyles.s16w400.copyWith(
-                  color: AppColors.titleWhite,
+              Expanded(
+                child: Text(
+                  "Покажите QR-код кассиру чтобы поменять их",
+                  style: AppTextStyles.s16w400.copyWith(
+                    color: AppColors.titleWhite,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
               SizedBox(height: isSmallScreen ? 16 : 32),
               Text(

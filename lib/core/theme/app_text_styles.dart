@@ -14,6 +14,10 @@ abstract class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle s16w600 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle s12w400 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
@@ -40,6 +44,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static const TextStyle s20w700 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+
   static const TextStyle s18w700 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w700,
@@ -48,6 +57,11 @@ abstract class AppTextStyles {
   static const TextStyle s18w600 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle s22w700 = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w700,
   );
 
   static const TextStyle mainHeader = TextStyle(
