@@ -1,0 +1,30 @@
+[
+    {
+      "id": "1",
+      "title": "Стейк Стриплойн",
+      "image_url": "lib/core/assets/images/salad.png",
+      "price": 1800,
+      "old_price": 2000
+    },
+    {
+      "id": "2",
+      "title": "Бургер BBQ",
+      "image_url": "lib/core/assets/images/salad.png",
+      "price": 950,
+      "old_price": null
+    },
+    {
+      "id": "3",
+      "title": "Салат Цезарь",
+      "image_url": "lib/core/assets/images/salad.png",
+      "price": 620,
+      "old_price": 700
+    },
+    {
+      "id": "4",
+      "title": "Картофель фри",
+      "image_url": "lib/core/assets/images/salad.png",
+      "price": 300,
+      "old_price": null
+    }
+]

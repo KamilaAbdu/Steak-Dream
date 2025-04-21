@@ -70,4 +70,32 @@ abstract class AppTextStyles {
     fontFamily: 'gillsans',
     color: AppColors.white,
   );
+
+  static const TextStyle productTitle = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'gillsans',
+    color: AppColors.white,
+  );
+
+  static const TextStyle productAddToCartButton = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'gillsans',
+    color: AppColors.white,
+  );
+
+  static const TextStyle productPrice = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'ubundu',
+    color: AppColors.textWhite,
+  );
+
+  static const TextStyle productOldPrice = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'ubundu',
+    color: AppColors.textGrey,
+  );
 }

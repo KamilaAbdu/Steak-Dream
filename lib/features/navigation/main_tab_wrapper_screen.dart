@@ -24,7 +24,7 @@ class MainTabWrapperScreen extends StatelessWidget {
         final tabsRouter = AutoTabsRouter.of(context);
 
         return Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: AppColors.backgraoundBlack,
           body: child,
           bottomNavigationBar: Container(
             margin: const EdgeInsets.only(bottom: 16, left: 16, right: 16),

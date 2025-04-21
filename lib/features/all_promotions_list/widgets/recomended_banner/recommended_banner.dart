@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:steak_dream/core/assets/app_assets.dart';
 import 'package:steak_dream/core/theme/app_dimens.dart';
-import 'package:steak_dream/features/all_promotions/widgets/promotion_title.dart';
-import 'package:steak_dream/features/all_promotions/widgets/recomended_banner/recommended_item_card.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/promotion_title.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/recomended_banner/recommended_item_card.dart';
 
 class RecommendedBanner extends StatelessWidget {
   const RecommendedBanner({super.key});

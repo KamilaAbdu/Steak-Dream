@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:steak_dream/features/all_promotions/widgets/stories_list/stories_dialog.dart';
-import 'package:steak_dream/features/all_promotions/widgets/stories_list/stories_item.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/stories_list/stories_dialog.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/stories_list/stories_item.dart';
 import 'package:steak_dream/features/stories/data/model/stories_model.dart';
 
 class StoriesHorizontalScrollingList extends StatefulWidget {

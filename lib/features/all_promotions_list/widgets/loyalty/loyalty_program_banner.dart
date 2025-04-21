@@ -6,10 +6,9 @@ import 'package:steak_dream/core/service/auto_router.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_dimens.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
-import 'package:steak_dream/features/all_promotions/widgets/promotion_title.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/promotion_title.dart';
 import 'package:steak_dream/features/loyalty_program/presentation/bloc/loyalty_bloc.dart';
 import 'package:steak_dream/features/loyalty_program/presentation/bloc/loyalty_event.dart';
-import 'package:steak_dream/features/loyalty_program/presentation/loyalty_screen.dart';
 
 class LoyaltyProgramBanner extends StatelessWidget {
   const LoyaltyProgramBanner({super.key});
@@ -30,11 +29,14 @@ class LoyaltyProgramBanner extends StatelessWidget {
                 color: AppColors.backgraoundBlack,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Image.asset(
-                AppAssets.bonusCoffeeBG,
-                height: 100,
-                width: double.infinity,
-                fit: BoxFit.cover,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  AppAssets.bonusCoffeeBG,
+                  height: 100,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ],
@@ -54,7 +56,6 @@ class LoyaltyProgramBanner extends StatelessWidget {
                     context.read<LoyaltyBloc>().add(LoadLoyaltyProgress());
                     context.pushRoute(const LoyaltyRoute());
                   },
-
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -84,3 +85,4 @@ class LoyaltyProgramBanner extends StatelessWidget {
     );
   }
 }
+

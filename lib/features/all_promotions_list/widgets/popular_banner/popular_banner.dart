@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:steak_dream/core/assets/app_assets.dart';
 import 'package:steak_dream/core/theme/app_dimens.dart';
-import 'package:steak_dream/features/all_promotions/widgets/popular_banner/popular_item_card.dart';
-import 'package:steak_dream/features/all_promotions/widgets/promotion_title.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/popular_banner/popular_item_card.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/promotion_title.dart';
 
 class PopularBanner extends StatelessWidget {
   const PopularBanner({super.key});

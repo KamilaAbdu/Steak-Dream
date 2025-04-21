@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
-import 'package:steak_dream/features/all_promotions/widgets/stories_list/stories_default_icon.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/stories_list/stories_default_icon.dart';
 import 'package:steak_dream/features/stories/data/model/stories_model.dart';
 
 class StoriesItem extends StatelessWidget {

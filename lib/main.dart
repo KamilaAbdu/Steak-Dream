@@ -8,8 +8,12 @@ import 'package:steak_dream/core/service/auto_router.dart';
 import 'package:steak_dream/features/loyalty_program/data/repository/loyalty_repository_impl.dart';
 import 'package:steak_dream/features/loyalty_program/domain/usecases/get_loyalty_progress.dart';
 import 'package:steak_dream/features/loyalty_program/presentation/bloc/loyalty_bloc.dart';
+import 'package:steak_dream/features/product/data/repository/product_repository_impl.dart';
+import 'package:steak_dream/features/product/domain/usecases/get_products.dart';
 import 'package:steak_dream/features/stories/presentation/bloc/stories_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'features/product/presentation/bloc/product_bloc.dart';
 
 void main() {
   runApp(const SteakDreamApp());
@@ -30,6 +34,9 @@ class SteakDreamApp extends StatelessWidget {
         BlocProvider(
           create:
               (_) => LoyaltyBloc(GetLoyaltyProgress(LoyaltyRepositoryImpl())),
+        ),
+        BlocProvider(
+          create: (_) => ProductBloc(GetProducts(ProductRepositoryImpl())),
         ),
       ],
       child: Consumer2<LocalizationProvider, ThemeProvider>(

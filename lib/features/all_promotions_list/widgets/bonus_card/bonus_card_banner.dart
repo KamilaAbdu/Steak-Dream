@@ -4,7 +4,7 @@ import 'package:steak_dream/core/extensions/context_extension.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_dimens.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
-import 'package:steak_dream/features/all_promotions/widgets/bonus_card/qr_dialog.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/bonus_card/qr_dialog.dart';
 
 class BonusCardBanner extends StatelessWidget {
   const BonusCardBanner({super.key});

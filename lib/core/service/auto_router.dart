@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:steak_dream/features/all_promotions/main_promotions_screen.dart';
-import 'package:steak_dream/features/all_promotions/promotions_list.dart';
+import 'package:steak_dream/features/navigation/main_promotions_screen.dart';
+import 'package:steak_dream/features/all_promotions_list/promotions_list.dart';
 import 'package:steak_dream/features/cart/cart_screen.dart';
 import 'package:steak_dream/features/catalog/catalog_screen.dart';
 import 'package:steak_dream/features/favorite/favorite_screen.dart';
