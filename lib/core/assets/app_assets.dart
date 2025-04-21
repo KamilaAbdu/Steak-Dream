@@ -25,6 +25,8 @@ class AppAssets {
   static const String recommended = 'lib/core/assets/images/recommended.png';
   static const String defaultStories = 'lib/core/assets/images/default_stories.png';
   static const String meat = 'lib/core/assets/images/meat.png';
+  static const String noFavorite = 'lib/core/assets/images/no_favorite.png';
+
 
 
 

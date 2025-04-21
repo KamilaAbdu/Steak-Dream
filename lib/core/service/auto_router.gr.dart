@@ -11,22 +11,6 @@
 part of 'auto_router.dart';
 
 /// generated route for
-/// [MainPromotionsScreen]
-class MainPromotionsRoute extends PageRouteInfo<void> {
-  const MainPromotionsRoute({List<PageRouteInfo>? children})
-    : super(MainPromotionsRoute.name, initialChildren: children);
-
-  static const String name = 'AllPromotionsRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const MainPromotionsScreen();
-    },
-  );
-}
-
-/// generated route for
 /// [CartScreen]
 class CartRoute extends PageRouteInfo<void> {
   const CartRoute({List<PageRouteInfo>? children})
@@ -86,6 +70,22 @@ class LoyaltyRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const LoyaltyScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [MainPromotionsScreen]
+class MainPromotionsRoute extends PageRouteInfo<void> {
+  const MainPromotionsRoute({List<PageRouteInfo>? children})
+    : super(MainPromotionsRoute.name, initialChildren: children);
+
+  static const String name = 'MainPromotionsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MainPromotionsScreen();
     },
   );
 }
