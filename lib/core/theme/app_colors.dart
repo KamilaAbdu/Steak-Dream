@@ -9,13 +9,14 @@ abstract class AppColors {
   static const Color titleWhite = Color(0xffEBEBEB);
   static const Color subTitleWhite = Color(0xffD9D9D9);
   static const Color textWhite = Color(0xffF0F2F7);
-
   static const Color yellow = Color(0xffF2BE0B);
-  static const Color orangeBackground = Color(0xFFF0971C);
 
+  static const Color orangeBackground = Color(0xFFF0971C);
   static const Color backgraoundBlack = Color(0xff121212);
 
   static const Color orangeBackgroundTransparent20 = Color(0x33F0971C);
   static const Color orangeBackgroundTransparent40 = Color(0x66F0971C);
+  static const Color blackTransparent40 = Color(0x66000000);
+
 
 }

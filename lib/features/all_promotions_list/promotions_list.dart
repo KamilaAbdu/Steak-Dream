@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_dimens.dart';
-import 'package:steak_dream/features/all_promotions_list/widgets/loyalty/loyalty_program_banner.dart';
+import 'package:steak_dream/features/all_promotions_list/widgets/loyalty_banner/loyalty_program_banner.dart';
 import 'package:steak_dream/features/all_promotions_list/widgets/build_app_bar.dart';
 import 'package:steak_dream/features/all_promotions_list/widgets/bonus_card/bonus_card_banner.dart';
 import 'package:steak_dream/features/all_promotions_list/widgets/popular_banner/popular_banner.dart';
@@ -20,6 +20,7 @@ import 'package:steak_dream/features/stories/presentation/bloc/stories_state.dar
 @RoutePage()
 class PromotionsListScreen extends StatefulWidget {
   const PromotionsListScreen({super.key});
+  
 
   @override
   State<PromotionsListScreen> createState() => _PromotionsListScreenState();
@@ -35,6 +36,9 @@ class _PromotionsListScreenState extends State<PromotionsListScreen> {
 
   @override
   Widget build(BuildContext context) {
+  
+
+
     return Scaffold(
       backgroundColor: AppColors.backgraoundBlack,
       appBar: buildAppBar(context),
@@ -67,7 +71,8 @@ class _PromotionsListScreenState extends State<PromotionsListScreen> {
               const SizedBox(height: AppDimens.extraLargePadding),
               const LoyaltyProgramBanner(),
               const SizedBox(height: 40),
-              const PopularBanner(),
+              
+              PopularBanner(),
               const SizedBox(height: AppDimens.extraLargePadding),
               const RecommendedBanner(),
               const SizedBox(height: AppDimens.extraLargePadding),

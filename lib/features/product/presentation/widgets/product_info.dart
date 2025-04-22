@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
-import '../../domain/entities/product.dart';
+import '../../domain/entities/product_entity.dart';
 
 class ProductInfo extends StatelessWidget {
-  final Product product;
+  final ProductEntity product;
 
-  const ProductInfo({required this.product});
+  const ProductInfo({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

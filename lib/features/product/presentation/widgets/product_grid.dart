@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../domain/entities/product.dart';
+import 'package:steak_dream/core/service/auto_router.dart';
+import '../../domain/entities/product_entity.dart';
 import 'product_card.dart';
 
 class ProductGrid extends StatelessWidget {
-  final List<Product> products;
+  final List<ProductEntity> products;
   
 
   const ProductGrid({super.key, required this.products});
@@ -34,7 +36,14 @@ class ProductGrid extends StatelessWidget {
         childAspectRatio: cardWidth / cardHeight,
       ),
       itemBuilder: (context, index) {
-        return ProductCard(product: products[index]);
+        return GestureDetector(
+          child: ProductCard(product: products[index]),
+          onTap: () {
+            context.router.push(
+                        ProductDetailsRoute(entity: products[index]),
+                      );
+          },
+          );
       },
     );
   }

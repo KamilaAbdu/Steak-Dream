@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:steak_dream/features/product/presentation/widgets/add_to_cart_button.dart';
 import 'package:steak_dream/features/product/presentation/widgets/product_image_with_favorite.dart';
 import 'package:steak_dream/features/product/presentation/widgets/product_info.dart';
-import '../../domain/entities/product.dart';
+import '../../domain/entities/product_entity.dart';
 
 class ProductCard extends StatelessWidget {
-  final Product product;
+  final ProductEntity product;
 
   const ProductCard({super.key, required this.product});
 

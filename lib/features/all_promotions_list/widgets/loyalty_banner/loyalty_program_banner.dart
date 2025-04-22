@@ -31,11 +31,20 @@ class LoyaltyProgramBanner extends StatelessWidget {
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  AppAssets.bonusCoffeeBG,
-                  height: 100,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      AppAssets.bonusCoffeeBG,
+                      height: 100,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    Container(
+                      height: 100,
+                      width: double.infinity,
+                      color: AppColors.blackTransparent40, 
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -85,4 +94,3 @@ class LoyaltyProgramBanner extends StatelessWidget {
     );
   }
 }
-

@@ -13,12 +13,12 @@ class MainTabWrapperScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter.tabBar(
-      routes: const [
-        MainPromotionsRoute(),
-        FavoriteRoute(),
-        CatalogRoute(),
+      routes: [
+        const MainPromotionsRoute(),
+        const FavoriteRoute(),
+        const CatalogRoute(),
         CartRoute(),
-        ProfileRoute(),
+        const ProfileRoute(),
       ],
       builder: (context, child, controller) {
         final tabsRouter = AutoTabsRouter.of(context);

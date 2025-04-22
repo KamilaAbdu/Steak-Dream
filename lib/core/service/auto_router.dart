@@ -1,11 +1,14 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:steak_dream/features/navigation/main_promotions_screen.dart';
 import 'package:steak_dream/features/all_promotions_list/promotions_list.dart';
 import 'package:steak_dream/features/cart/presentation/cart_screen.dart';
-import 'package:steak_dream/features/catalog/catalog_screen.dart';
+import 'package:steak_dream/features/catalog/presentation/catalog_screen.dart';
 import 'package:steak_dream/features/favorite/presentation/favorite_screen.dart';
 import 'package:steak_dream/features/loyalty_program/presentation/loyalty_screen.dart';
 import 'package:steak_dream/features/navigation/main_tab_wrapper_screen.dart';
+import 'package:steak_dream/features/product/domain/entities/product_entity.dart';
+import 'package:steak_dream/features/product/presentation/product_details_screen.dart';
 import 'package:steak_dream/features/profile/profile_screen.dart';
 import 'package:steak_dream/features/stories/presentation/stories_screen.dart';
 
@@ -35,6 +38,9 @@ class AppRouter extends RootStackRouter {
 ),
 
     AutoRoute(page: StoriesRoute.page),
+    AutoRoute(page: ProductDetailsRoute.page),
+
+
 
   ];
 

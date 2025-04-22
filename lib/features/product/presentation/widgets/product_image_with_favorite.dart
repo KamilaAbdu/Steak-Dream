@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:steak_dream/features/favorite/presentation/bloc/favorite_bloc.dart';
-import '../../domain/entities/product.dart';
+import '../../domain/entities/product_entity.dart';
 
 class ProductImageWithFavorite extends StatelessWidget {
-  final Product product;
+  final ProductEntity product;
 
   const ProductImageWithFavorite({required this.product});
 

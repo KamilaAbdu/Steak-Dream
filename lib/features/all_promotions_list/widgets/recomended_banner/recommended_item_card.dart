@@ -15,7 +15,7 @@ class RecommendedItemCard extends StatelessWidget {
     required this.title,
     required this.image,
     required this.price,
-    this.bonus = 45,
+    this.bonus,
   });
 
   @override

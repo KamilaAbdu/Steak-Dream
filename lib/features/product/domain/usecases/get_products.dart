@@ -1,4 +1,4 @@
-import '../entities/product.dart';
+import '../entities/product_entity.dart';
 import '../repositories/product_repository.dart';
 
 class GetProducts {
@@ -6,5 +6,5 @@ class GetProducts {
 
   GetProducts(this.repository);
 
-  Future<List<Product>> call() => repository.getProducts();
+  Future<List<ProductEntity>> call() => repository.getProducts();
 }

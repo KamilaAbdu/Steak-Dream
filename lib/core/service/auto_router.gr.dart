@@ -12,18 +12,38 @@ part of 'auto_router.dart';
 
 /// generated route for
 /// [CartScreen]
-class CartRoute extends PageRouteInfo<void> {
-  const CartRoute({List<PageRouteInfo>? children})
-    : super(CartRoute.name, initialChildren: children);
+class CartRoute extends PageRouteInfo<CartRouteArgs> {
+  CartRoute({Key? key, bool isAuthorized = true, List<PageRouteInfo>? children})
+    : super(
+        CartRoute.name,
+        args: CartRouteArgs(key: key, isAuthorized: isAuthorized),
+        initialChildren: children,
+      );
 
   static const String name = 'CartRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const CartScreen();
+      final args = data.argsAs<CartRouteArgs>(
+        orElse: () => const CartRouteArgs(),
+      );
+      return CartScreen(key: args.key, isAuthorized: args.isAuthorized);
     },
   );
+}
+
+class CartRouteArgs {
+  const CartRouteArgs({this.key, this.isAuthorized = true});
+
+  final Key? key;
+
+  final bool isAuthorized;
+
+  @override
+  String toString() {
+    return 'CartRouteArgs{key: $key, isAuthorized: $isAuthorized}';
+  }
 }
 
 /// generated route for
@@ -104,6 +124,43 @@ class MainTabWrapperRoute extends PageRouteInfo<void> {
       return const MainTabWrapperScreen();
     },
   );
+}
+
+/// generated route for
+/// [ProductDetailsScreen]
+class ProductDetailsRoute extends PageRouteInfo<ProductDetailsRouteArgs> {
+  ProductDetailsRoute({
+    Key? key,
+    required ProductEntity entity,
+    List<PageRouteInfo>? children,
+  }) : super(
+         ProductDetailsRoute.name,
+         args: ProductDetailsRouteArgs(key: key, entity: entity),
+         initialChildren: children,
+       );
+
+  static const String name = 'ProductDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<ProductDetailsRouteArgs>();
+      return ProductDetailsScreen(key: args.key, entity: args.entity);
+    },
+  );
+}
+
+class ProductDetailsRouteArgs {
+  const ProductDetailsRouteArgs({this.key, required this.entity});
+
+  final Key? key;
+
+  final ProductEntity entity;
+
+  @override
+  String toString() {
+    return 'ProductDetailsRouteArgs{key: $key, entity: $entity}';
+  }
 }
 
 /// generated route for

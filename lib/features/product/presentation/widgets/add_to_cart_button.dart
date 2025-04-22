@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:steak_dream/core/assets/app_assets.dart';
-import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
 import 'package:steak_dream/features/cart/domain/entities/cart_item.dart';
 import 'package:steak_dream/features/cart/presentation/bloc/cart_bloc.dart';
 import 'package:steak_dream/features/product/presentation/widgets/cart_dialog_bar.dart';
-import '../../domain/entities/product.dart';
+import '../../domain/entities/product_entity.dart';
 
 class AddToCartButton extends StatelessWidget {
-  final Product product;
+  final ProductEntity product;
 
   const AddToCartButton({
     super.key,
