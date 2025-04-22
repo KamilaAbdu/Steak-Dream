@@ -10,17 +10,18 @@ import '../../domain/entities/product_entity.dart';
 
 class AddToCartButton extends StatelessWidget {
   final ProductEntity product;
+  final double height;
 
   const AddToCartButton({
     super.key,
-    required this.product,
+    required this.product, required this.height,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 30,
+      height: height,
       child: OutlinedButton(
         onPressed: () {
           final cartItem = CartItem(

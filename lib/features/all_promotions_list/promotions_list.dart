@@ -20,7 +20,6 @@ import 'package:steak_dream/features/stories/presentation/bloc/stories_state.dar
 @RoutePage()
 class PromotionsListScreen extends StatefulWidget {
   const PromotionsListScreen({super.key});
-  
 
   @override
   State<PromotionsListScreen> createState() => _PromotionsListScreenState();
@@ -36,9 +35,6 @@ class _PromotionsListScreenState extends State<PromotionsListScreen> {
 
   @override
   Widget build(BuildContext context) {
-  
-
-
     return Scaffold(
       backgroundColor: AppColors.backgraoundBlack,
       appBar: buildAppBar(context),
@@ -71,9 +67,10 @@ class _PromotionsListScreenState extends State<PromotionsListScreen> {
               const SizedBox(height: AppDimens.extraLargePadding),
               const LoyaltyProgramBanner(),
               const SizedBox(height: 40),
-              
               PopularBanner(),
               const SizedBox(height: AppDimens.extraLargePadding),
+              const PromotionTitle(title: 'Рекомендуемое'),
+              const SizedBox(height: AppDimens.mediumPadding),
               const RecommendedBanner(),
               const SizedBox(height: AppDimens.extraLargePadding),
               PromotionTitle(title: 'Наши продукции'),

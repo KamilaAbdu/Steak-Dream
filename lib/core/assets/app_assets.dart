@@ -11,9 +11,9 @@ class AppAssets {
   static const String giftIcon = 'lib/core/assets/icons/gift_icon.svg';
   static const String giftIconActive = 'lib/core/assets/icons/gift_icon_active.svg';
   static const String circleCheckIcon = 'lib/core/assets/icons/cicle_check_icon.svg';
-  static const String shareIcon = 'lib/core/assets/icons/share_icon.svg';
 
   static const String coffeeCheckIconActive = 'lib/core/assets/icons/coffee_check_icon_active.svg';
+  static const String shareItem = 'lib/core/assets/icons/share_item.svg';
 
 
 

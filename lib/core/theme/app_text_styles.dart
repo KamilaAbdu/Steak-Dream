@@ -102,4 +102,18 @@ abstract class AppTextStyles {
     fontFamily: 'ubundu',
     color: AppColors.textGrey,
   );
+
+  static const TextStyle detailedProductHeader = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'sfpro',
+    color: AppColors.white,
+  );
+
+  static const TextStyle detailedProductDescription = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'gillsans',
+    color: AppColors.titleWhite,
+  );
 }

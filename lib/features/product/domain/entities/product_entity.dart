@@ -5,6 +5,7 @@ class ProductEntity {
   final int price;
   final int? oldPrice;
   final int? bonus;
+  final String? desc;
 
   const ProductEntity({
     required this.id,
@@ -12,6 +13,7 @@ class ProductEntity {
     required this.imageUrl,
     required this.price,
     this.oldPrice,
-    this.bonus
+    this.bonus,
+    this.desc, 
   });
 }

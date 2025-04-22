@@ -48,6 +48,10 @@ flutter:
       fonts:
         - asset: lib/core/assets/fonts/ubuntu.ttf
           weight: 400
+    - family: sfpro
+      fonts:
+        - asset: lib/core/assets/fonts/sf_pro.otf
+          weight: 400
 
 flutter_intl:
   enabled: true 

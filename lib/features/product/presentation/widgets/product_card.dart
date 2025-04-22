@@ -19,7 +19,7 @@ class ProductCard extends StatelessWidget {
           ProductImageWithFavorite(product: product),
           ProductInfo(product: product),
           const SizedBox(height: 10),
-          AddToCartButton(product: product),
+          AddToCartButton(product: product, height: 30,),
           const SizedBox(height: 10),
         ],
       ),
