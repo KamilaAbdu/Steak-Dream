@@ -10,7 +10,7 @@ class AppAssets {
   static const String coffeeCheckIcon = 'lib/core/assets/icons/coffee_check_icon.svg';
   static const String giftIcon = 'lib/core/assets/icons/gift_icon.svg';
   static const String giftIconActive = 'lib/core/assets/icons/gift_icon_active.svg';
-
+  static const String circleCheckIcon = 'lib/core/assets/icons/cicle_check_icon.svg';
 
   static const String coffeeCheckIconActive = 'lib/core/assets/icons/coffee_check_icon_active.svg';
 
@@ -25,7 +25,7 @@ class AppAssets {
   static const String recommended = 'lib/core/assets/images/recommended.png';
   static const String defaultStories = 'lib/core/assets/images/default_stories.png';
   static const String meat = 'lib/core/assets/images/meat.png';
-  static const String noFavorite = 'lib/core/assets/images/no_favorite.png';
+  static const String emptyBasket = 'lib/core/assets/images/no_favorite.png';
 
 
 

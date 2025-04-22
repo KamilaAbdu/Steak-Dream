@@ -6,7 +6,9 @@ import 'package:steak_dream/core/l10n/generated/l10n.dart';
 import 'package:steak_dream/core/provider/localization_provider.dart';
 import 'package:steak_dream/core/provider/theme_provider.dart';
 import 'package:steak_dream/core/service/auto_router.dart';
+import 'package:steak_dream/features/cart/data/repository/cart_repository_impl.dart';
 import 'package:steak_dream/features/cart/domain/usecase/add_to_cart.dart';
+import 'package:steak_dream/features/cart/presentation/bloc/cart_bloc.dart';
 import 'package:steak_dream/features/favorite/domain/usecases/get_favorites.dart';
 import 'package:steak_dream/features/loyalty_program/data/repository/loyalty_repository_impl.dart';
 import 'package:steak_dream/features/loyalty_program/domain/usecases/get_loyalty_progress.dart';
@@ -14,12 +16,10 @@ import 'package:steak_dream/features/product/data/repository/product_repository_
 import 'package:steak_dream/features/product/domain/usecases/get_products.dart';
 import 'package:steak_dream/features/favorite/data/repository/favorite_repository_impl.dart';
 import 'package:steak_dream/features/favorite/domain/usecases/toggle_favorite.dart';
-import 'package:steak_dream/features/cart/data/repository/cart_repository_impl.dart';
 import 'package:steak_dream/features/loyalty_program/presentation/bloc/loyalty_bloc.dart';
 import 'package:steak_dream/features/product/presentation/bloc/product_bloc.dart';
 import 'package:steak_dream/features/stories/presentation/bloc/stories_bloc.dart';
 import 'package:steak_dream/features/favorite/presentation/bloc/favorite_bloc.dart';
-import 'package:steak_dream/features/cart/presentation/bloc/cart_bloc.dart';
 
 void main() {
   runApp(const SteakDreamApp());
@@ -50,6 +50,13 @@ class SteakDreamApp extends StatelessWidget {
                 toggleFavorite: ToggleFavorite(FavoriteRepositoryImpl()),
                 getFavorites: GetFavorites(FavoriteRepositoryImpl()),
               )..add(LoadFavorites()),
+        ),
+        BlocProvider(
+          create:
+              (_) => CartBloc(
+                addToCart: AddToCart(CartRepositoryImpl()),
+                repository: CartRepositoryImpl(),
+              )..add(LoadCart()),
         ),
       ],
       child: Consumer2<LocalizationProvider, ThemeProvider>(

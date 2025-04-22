@@ -36,6 +36,7 @@ class ProductInfo extends StatelessWidget {
                     style: AppTextStyles.s14w400.copyWith(
                       decoration: TextDecoration.lineThrough,
                       color: AppColors.textGrey,
+                      decorationColor: AppColors.textGrey,
                     ),
                   ),
               ],

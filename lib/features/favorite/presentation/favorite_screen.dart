@@ -7,6 +7,7 @@ import 'package:steak_dream/core/service/auto_router.dart';
 import 'package:steak_dream/core/theme/app_colors.dart';
 import 'package:steak_dream/core/theme/app_text_styles.dart';
 import 'package:steak_dream/features/favorite/presentation/bloc/favorite_bloc.dart';
+import 'package:steak_dream/features/favorite/presentation/widgets/empty_favorite_view.dart';
 import 'package:steak_dream/features/product/presentation/widgets/product_card.dart';
 import 'package:steak_dream/features/product/presentation/bloc/product_bloc.dart';
 
@@ -45,7 +46,7 @@ class FavoriteScreen extends StatelessWidget {
                           .toList();
 
                   if (favoriteProducts.isEmpty) {
-                    return const _EmptyFavoriteView();
+                    return const EmptyFavoriteView();
                   }
 
                   return Padding(
@@ -75,27 +76,6 @@ class FavoriteScreen extends StatelessWidget {
           }
           return const Center(child: CircularProgressIndicator());
         },
-      ),
-    );
-  }
-}
-
-class _EmptyFavoriteView extends StatelessWidget {
-  const _EmptyFavoriteView();
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('lib/core/assets/images/no_favorites.png', width: 180),
-          const SizedBox(height: 16),
-          const Text(
-            'У вас нет избранных товаров',
-            style: TextStyle(color: Colors.white, fontSize: 16),
-          ),
-        ],
       ),
     );
   }
